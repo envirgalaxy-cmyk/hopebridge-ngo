@@ -1,0 +1,49 @@
+type VolunteerSignup = 
+ record {
+   email: text;
+   id: nat;
+   motivation: text;
+   name: text;
+   role: text;
+   timestamp: Timestamp;
+ };
+type Timestamp = int;
+type NewsletterSignup = 
+ record {
+   email: text;
+   id: nat;
+   timestamp: Timestamp;
+ };
+type DonationSubmission = 
+ record {
+   amount: nat;
+   cause: text;
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   recurring: bool;
+   timestamp: Timestamp;
+ };
+type ContactSubmission = 
+ record {
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   subject: text;
+   timestamp: Timestamp;
+ };
+service : {
+  getContactSubmissions: () -> (vec ContactSubmission) query;
+  getDonationSubmissions: () -> (vec DonationSubmission) query;
+  getNewsletterSignups: () -> (vec NewsletterSignup) query;
+  getVolunteerSignups: () -> (vec VolunteerSignup) query;
+  submitContactForm: (name: text, email: text, subject: text, message:
+   text) -> (nat);
+  submitDonationForm: (name: text, email: text, cause: text, amount: 
+   nat, recurring: bool, message: text) -> (nat);
+  submitNewsletterSignup: (email: text) -> (nat);
+  submitVolunteerSignup: (name: text, email: text, role: text, motivation:
+   text) -> (nat);
+}

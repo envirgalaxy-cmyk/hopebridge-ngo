@@ -1,0 +1,23 @@
+{
+  "overview": "A modern, impactful multi-page NGO/Non-Profit website showcasing causes in education, environment, and healthcare. Features a demo donation flow, volunteer signup, impact statistics, and compelling storytelling across 6 pages.",
+  "features": [
+    "6-page site: Home, Causes, Donations, Volunteers, About Us, Contact",
+    "Pre-populated sample causes with fundraising progress bars",
+    "Demo donation form with impact breakdowns",
+    "Volunteer signup form with opportunity listings",
+    "Impact statistics and testimonials",
+    "Fully responsive, accessible design with warm earthy tones"
+  ],
+  "category": "nonprofit",
+  "tags": [
+    "ngo",
+    "nonprofit",
+    "charity",
+    "donations",
+    "volunteers",
+    "causes",
+    "react",
+    "tailwind"
+  ],
+  "last_updated": "2026-04-25T04:32:16.841Z"
+}

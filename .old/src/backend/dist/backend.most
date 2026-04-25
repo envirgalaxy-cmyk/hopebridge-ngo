@@ -1,0 +1,66 @@
+// Version: 1.0.0
+type ContactSubmission__185949536 =
+  {
+    email : Text;
+    id : Nat;
+    message : Text;
+    name : Text;
+    subject : Text;
+    timestamp : Timestamp__460331043
+  };
+type DonationSubmission__867265899 =
+  {
+    amount : Nat;
+    cause : Text;
+    email : Text;
+    id : Nat;
+    message : Text;
+    name : Text;
+    recurring : Bool;
+    timestamp : Timestamp__460331043
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewsletterSignup__398822986 =
+  {email : Text; id : Nat; timestamp : Timestamp__460331043};
+type Timestamp__301639476 = Int;
+type Timestamp__460331043 = Timestamp__301639476;
+type VolunteerSignup__432979485 =
+  {
+    email : Text;
+    id : Nat;
+    motivation : Text;
+    name : Text;
+    role : Text;
+    timestamp : Timestamp__460331043
+  };
+actor {
+  stable contacts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__185949536]];
+      var elementIndex : Nat__490723111
+    };
+  stable donations :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?DonationSubmission__867265899]];
+      var elementIndex : Nat__490723111
+    };
+  stable newsletters :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?NewsletterSignup__398822986]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextContactId : Nat;
+  stable var nextDonationId : Nat;
+  stable var nextNewsletterId : Nat;
+  stable var nextVolunteerId : Nat;
+  stable volunteers :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?VolunteerSignup__432979485]];
+      var elementIndex : Nat__490723111
+    }
+};
