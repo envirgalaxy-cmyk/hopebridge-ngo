@@ -152,15 +152,24 @@ export default function Footer() {
 
         <div className="border-t border-border pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} HopeBridge. All rights reserved.</p>
-          <p>
-            Built with love using{" "}
+          <p className="text-xs text-primary-foreground/40 font-medium">
+            Designed By{" "}
             <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
+              href="https://jayy-patel.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-colors duration-200 underline underline-offset-2"
+              className="text-accent hover:underline transition-all"
             >
-              caffeine.ai
+              Jay Patel
+            </a>{" "}
+            👾{" "}
+            <a
+              href="https://envirgalaxy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline transition-all"
+            >
+              (EnvirGalaxy)
             </a>
           </p>
         </div>

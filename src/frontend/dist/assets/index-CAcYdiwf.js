@@ -15756,7 +15756,7 @@ function mergeLoginOptions(loginOptions, otherLoginOptions) {
   };
 }
 const ONE_HOUR_IN_NANOSECONDS = BigInt(36e11);
-const DEFAULT_IDENTITY_PROVIDER = "https://id.ai";
+const DEFAULT_IDENTITY_PROVIDER = "https://identity.internetcomputer.org/";
 const InternetIdentityReactContext = reactExports.createContext(void 0);
 async function createAuthClient(createOptions) {
   const config = await loadConfig();
@@ -36649,17 +36649,30 @@ function Footer() {
         (/* @__PURE__ */ new Date()).getFullYear(),
         " HopeBridge. All rights reserved."
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
-        "Built with love using",
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-primary-foreground/40 font-medium", children: [
+        "Designed By",
         " ",
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "a",
           {
-            href: `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`,
+            href: "https://jayy-patel.vercel.app/",
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "hover:text-primary transition-colors duration-200 underline underline-offset-2",
-            children: "caffeine.ai"
+            className: "text-accent hover:underline transition-all",
+            children: "Jay Patel"
+          }
+        ),
+        " ",
+        "👾",
+        " ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: "https://envirgalaxy.com/",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "text-accent hover:underline transition-all",
+            children: "(EnvirGalaxy)"
           }
         )
       ] })
